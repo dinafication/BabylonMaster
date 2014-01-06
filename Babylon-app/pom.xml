@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>Babylon-parent</artifactId>
+		<groupId>Babylon</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>Babylon-app</artifactId>
+	<packaging>apk</packaging>
+	<name>Babylon-app</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<platform.version>4.1.1.4</platform.version>
+		<android.plugin.version>3.6.1</android.plugin.version>
+		<compatibility.version>18</compatibility.version>
+	</properties>
+
+	<dependencies>
+<!-- 		<dependency> -->
+<!-- 			<groupId>hr.hackweek</groupId> -->
+<!-- 			<artifactId>encchecker-lib</artifactId> -->
+<!-- 			<version>${project.version}</version> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>android</artifactId>
+			<version>${platform.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- Ako se javi greška treba pokrenuti mvn clean -P install-missing-dependencies 
+			na projektu encchecker-app -->
+		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>android-support</artifactId>
+			<version>v4</version>
+		</dependency>
+
+		<!-- Ako se javi greška treba pokrenuti mvn clean -P install-missing-dependencies 
+			na projektu encchecker-app -->
+		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>analytics-services</artifactId>
+			<version>3.01</version>
+		</dependency>
+
+		<!-- Ako se javi greška treba pokrenuti mvn clean -P install-missing-dependencies 
+			na projektu encchecker-app -->
+		<dependency>
+			<groupId>com.google</groupId>
+			<artifactId>GoogleAdMobAdsSdk</artifactId>
+			<version>6.4.1</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>Babylon</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+					<artifactId>android-maven-plugin</artifactId>
+					<version>${android.plugin.version}</version>
+					<extensions>true</extensions>
+				</plugin>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.mojo
+										</groupId>
+										<artifactId>
+											properties-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.0-alpha-2,)
+										</versionRange>
+										<goals>
+											<goal>
+												read-project-properties
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+
+			<!-- properties plugin se koristi da se učitaju local prpoertisi za projekt. 
+				Ti propertisi se koriste pri kompajliranju projekta -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>1.0-alpha-2</version>
+				<executions>
+					<execution>
+						<phase>initialize</phase>
+						<goals>
+							<goal>read-project-properties</goal>
+						</goals>
+						<configuration>
+							<files>
+								<file>local.properties</file>
+							</files>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+				<artifactId>android-maven-plugin</artifactId>
+				<configuration>
+					<sdk>
+						<platform>16</platform>
+					</sdk>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<profiles>
+		<profile>
+			<id>install-missing-dependencies</id>
+			<build>
+				<plugins><!-- Install plugin se koristi da bi se u lokalni repozitorij 
+						instalirali dependencyi koji se ne mogu skinuti s maven repozitorija. Treba 
+						se pokrenuti naredba mvn clean Isto se može postići s naredbom: mvn install:install-file 
+						-DgroupId=com.google.android -DartifactId=android-support -Dversion=v4 -Dpackaging=jar 
+						-Dfile=lib/android-support-v4.jar -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-install-plugin</artifactId>
+						<version>2.3.1</version>
+						<executions>
+							<execution>
+								<id>install-android-support-lib</id>
+								<goals>
+									<goal>install-file</goal>
+								</goals>
+								<phase>clean</phase>
+								<configuration>
+									<file>lib/android-support-v4.jar</file>
+									<groupId>com.google.android</groupId>
+									<artifactId>android-support</artifactId>
+									<version>v4</version>
+									<packaging>jar</packaging>
+								</configuration>
+							</execution>
+							<execution>
+								<id>install-jar-lib</id>
+								<goals>
+									<goal>install-file</goal>
+								</goals>
+								<phase>clean</phase>
+								<configuration>
+									<file>lib/GoogleAdMobAdsSdk-6.4.1.jar</file>
+									<groupId>com.google</groupId>
+									<artifactId>GoogleAdMobAdsSdk</artifactId>
+									<version>6.4.1</version>
+									<packaging>jar</packaging>
+								</configuration>
+							</execution>
+							<execution>
+								<id>install-android-analytics</id>
+								<goals>
+									<goal>install-file</goal>
+								</goals>
+								<phase>clean</phase>
+								<configuration>
+									<file>lib/libGoogleAnalyticsServices.jar</file>
+									<groupId>com.google.android</groupId>
+									<artifactId>analytics-services</artifactId>
+									<version>3.01</version>
+									<packaging>jar</packaging>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

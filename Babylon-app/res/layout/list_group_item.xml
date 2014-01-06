@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:focusable="false"
+    android:paddingTop="5dip" >
+
+    <LinearLayout
+        android:id="@+id/groupItemText"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:focusable="false"
+        android:clickable="true"
+        android:background="@color/group_item" >
+
+
+        <TextView
+            android:id="@+id/item_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="4dip"
+            android:layout_marginTop="2dip"
+            android:layout_marginLeft="8dip"
+            android:focusable="false"
+            android:textSize="16sp"
+             />
+
+    </LinearLayout>
+
+</LinearLayout>

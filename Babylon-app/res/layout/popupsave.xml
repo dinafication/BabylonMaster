@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#1C1C1C">
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="vertical" >
+    
+     <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="14dip"
+      android:layout_marginLeft="4dip"
+      android:orientation="vertical"
+      >
+       <Button
+          android:id="@+id/saveBtn"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:textSize="18sp"
+          android:layout_margin="4dip"
+          android:textColor="#ffffff"
+          android:background="#1C1C1C"
+          android:onClick="onclickSave"
+          android:text="Save" />
+   
+<!--       <Button -->
+<!--           android:id="@+id/editBtn" -->
+<!--           android:layout_width="fill_parent" -->
+<!--           android:layout_height="wrap_content" -->
+<!--           android:textSize="20sp"          -->
+<!--           android:layout_margin="4dip" -->
+<!--            android:textColor="#ffffff" -->
+<!--            android:background="#1C1C1C" -->
+<!--           android:text="Edit" /> -->
+      </LinearLayout>
+ </LinearLayout>
+</LinearLayout>

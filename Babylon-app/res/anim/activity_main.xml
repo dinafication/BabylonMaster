@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/state_oglasi"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ad_layout_height" >
+
+        <com.google.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            ads:adSize="@string/size"
+            ads:loadAdOnCreate="true" />
+    </FrameLayout>
+
+     <TextView
+        android:id="@+id/enc_stanje_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="test"
+        android:textSize="@dimen/app_text_size" />
+
+</RelativeLayout>

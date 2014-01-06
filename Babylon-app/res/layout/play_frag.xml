@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|top"
+        android:text="0/0"
+        android:textSize="@dimen/app_text_size_smaller" />
+
+    <LinearLayout
+        android:id="@+id/upperBtns"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:baselineAligned="false" >
+
+        <LinearLayout
+            android:id="@+id/pomNew"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btnNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/newGame"
+                android:onClick="onClckNewGame" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pomQut"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btnQuit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Finish"                
+                android:onClick="onClckFinish" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/questions"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/layout_margin_small"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:background="@android:color/transparent"
+            android:onClick="onClckWord"
+            android:text="@string/LNG"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/app_text_size" />
+        
+          <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@android:color/transparent"
+            android:gravity="bottom"
+            android:onClick="onClckShow"
+            android:text="@string/LVL"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/app_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lowerBtns"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_weight="1"        
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/pomFls"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/imgBtnFalse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@null"
+                android:src="@drawable/w6" 
+                android:onClick="onClckFalse"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pomTru"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/imgBtnTrue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@null"
+                android:onClick="onClckTrue"
+                android:src="@drawable/true9" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

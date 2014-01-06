@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rgroup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RadioButton
+        android:id="@+id/lng1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:showDividers="middle"        
+        android:onClick="rbLngonClck"
+        android:tag="SPAN"
+        android:text="@string/SPAN"/>
+    
+    <LinearLayout android:layout_height="@dimen/spaceBtwnRBtn"/>
+
+    <RadioButton
+        android:id="@+id/lng2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="rbLngonClck"
+        android:tag="TAL"
+        android:text="@string/TAL" />
+    
+    <LinearLayout android:layout_height="@dimen/spaceBtwnRBtn"/>
+
+    <RadioButton
+        android:id="@+id/lng3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:onClick="rbLngonClck"
+        android:tag="GER"
+        android:text="@string/GER" />
+    
+    <LinearLayout android:layout_height="@dimen/spaceBtwnRBtn"/>
+
+    <RadioButton
+        android:id="@+id/lng4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:onClick="rbLngonClck"
+        android:tag="FRA"
+        android:text="@string/FRA" />
+
+</RadioGroup>

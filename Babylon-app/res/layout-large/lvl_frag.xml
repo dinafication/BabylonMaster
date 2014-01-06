@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rgroupLvl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RadioButton
+        android:id="@+id/lvl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:showDividers="middle"        
+        android:tag="E"
+        android:onClick="rbLvlonClick"
+        android:text="@string/E" />
+    
+    <LinearLayout android:layout_height="@dimen/spaceBtwnRBtn"/>
+
+    <RadioButton
+        android:id="@+id/lvl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   
+        android:tag="PI"
+        android:onClick="rbLvlonClick"
+        android:text="@string/PI" />
+    
+    <LinearLayout android:layout_height="@dimen/spaceBtwnRBtn"/>
+
+    <RadioButton
+        android:id="@+id/lvl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="I"
+        android:onClick="rbLvlonClick"
+        android:text="@string/I" />
+    
+    <LinearLayout android:layout_height="@dimen/spaceBtwnRBtn"/>
+
+    <RadioButton
+        android:id="@+id/lvl4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   
+        android:tag="UI"
+        android:onClick="rbLvlonClick"
+        android:text="@string/UI" />
+    
+     <LinearLayout android:layout_height="@dimen/spaceBtwnRBtn"/>
+
+    <RadioButton
+        android:id="@+id/lvl4"
+        android:layout_width="wrap_content"
+        android:tag="A"
+        android:onClick="rbLvlonClick"
+        android:layout_height="wrap_content"
+        android:text="@string/A" />
+    <LinearLayout android:layout_height="@dimen/spaceBtwnRBtn"/>
+
+    <RadioButton
+        android:id="@+id/lvl4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   
+        android:tag="P"
+        android:onClick="rbLvlonClick"
+        android:text="@string/P" />
+
+</RadioGroup>

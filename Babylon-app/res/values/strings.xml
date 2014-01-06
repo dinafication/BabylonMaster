@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="LNG">Language</string>
+    <string name="LVL">Level</string>
+    <string name="NLNG">Native language</string>
+    <string name="PLY">Play</string>
+    <string name="WS">My Words</string>
+    <string name="About">About</string>
+    <string name="Hlp">Help</string>
+    <string name="app_name">Bab</string>
+    <string name="TAL">Italian</string>
+    <string name="GER">German</string>
+    <string name="FRA">French</string>
+    <string name="SPAN">Spanish</string>
+    <string name="E">Elementary</string>
+    <string name="PI">Pre-intermediate</string>
+    <string name="I">Intermediate</string>
+    <string name="UI">Upper-intermediate</string>
+    <string name="A">Advanced</string>
+    <string name="P">Proficient</string>
+    <string name="newGame">New Game</string>
+    <string name="Finish">Finish</string>
+    <string name="NewGameMsg">Are you sure you want to delete the score?</string>
+    <string name="NewGamegOK">Yes</string>
+    <string name="NewGameNO">Keep playing</string>
+    <string name="FinishMsg1">Buahhaaa</string>
+    <string name="FinishMsg2">Keep practicing</string>
+    <string name="FinishMsg3">Well Done!</string>
+    <string name="FinishMsg4">Wow! Go to next level</string>
+    <string name="FinishMsg5">Scared to lose?? Getting to wow :)</string>
+    <string name="FinishMsgOK">Keep playing</string>
+    <string name="FinishMsgNO">Exit</string>
+    <string name="show">show</string>
+
+<!--     <color name="custom_theme_background">#424242</color> -->
+<color name="custom_theme_background">#1c1c1c</color>
+    <!-- <color name="custom_theme_txtview_background">#D8D8D8</color> -->
+    <color name="custom_theme_txtview_background">#333333</color>
+
+    <integer name="selected_tab_color1">0xFF0AD7D7</integer>
+    <integer name="selected_tab_color2">0xFF0188CC</integer>
+    
+      <integer name="unselected_tab_color1">0xFF363636</integer>
+    <integer name="unselected_tab_color2">0xFF030303</integer>
+    
+
+    <string name="SuccessSave">Successfully saved</string>
+    <string name="UnsucessSave">Sorry, unsuccessful save.. </string>
+    <string name="ExistingSave">Already saved</string>
+    
+      <string name="Quit">Are you sure you want to exit?</string>
+      
+      <string name="sureDelMsg">Are you sure you want to delete?</string>
+    <string name="DeleteNO">No</string>
+    
+     <string name="UnsucessDel">Sorry, it was unsuccessful delete..</string>
+    <string name="SucessDel">Successful delete</string>
+    
+      <string name="Hello">Hello</string>
+       <string name="SelectMsg">Could u please select language and level..</string>       
+       <string name="OK">OK</string>
+
+</resources>

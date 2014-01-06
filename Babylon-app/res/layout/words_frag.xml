@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    
+      <TextView
+        android:id="@+id/noWords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:textSize="@dimen/help_text_size"
+        android:textStyle="italic"
+        android:text="No words.." >
+    </TextView>
+    
+    
+     <ExpandableListView
+        android:id="@+id/expandableListViewWords"
+        android:layout_width="fill_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="20dp"
+        android:groupIndicator="@drawable/play_expand_background"
+        android:listSelector="@drawable/play_expand_seletor"
+        android:scrollbars="none" >
+    </ExpandableListView>
+   
+
+</RelativeLayout>

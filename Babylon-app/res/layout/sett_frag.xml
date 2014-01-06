@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/TextView_HelpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:textSize="@dimen/help_text_size"
+        android:textStyle="italic" >
+    </TextView>
+
+
+
+<!-- lista -->
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/TextView_HelpText" >
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none" >
+    </ExpandableListView>
+    </RelativeLayout>
+
+     <ImageButton
+         android:id="@+id/imageButton1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:layout_marginBottom="4dp"
+         android:layout_marginLeft="66dp"
+         android:background="@android:color/transparent"
+         android:src="@drawable/group_play4"
+         android:onClick="btnPlayOnClck" />
+
+</RelativeLayout>
